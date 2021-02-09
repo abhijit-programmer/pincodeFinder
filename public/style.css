@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ecf0f1;
+}
+
+/* Navigation Bar */
+#navbar {
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    padding: 0.5rem;
+}
+
+/* Search container */
+#search-container {
+    width: 50%;
+    margin: auto;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+#search-container form {
+    display: flex;
+    justify-content: center;
+}
+
+#city {
+    font-size: 14px;
+    padding: 8px 16px;
+    color: #2c3e50;
+    border-radius: 5px;
+    background-color: #bdc3c7;
+    border: 2px solid var(--input-border);
+}
+
+#submit-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    background-color: #27ae60;
+    color: #ecf0f1;
+    border: 2px solid var(--input-border);
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* Result section */
+#result-container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#result-container .box {
+    width: 200px;
+    margin: auto;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #bdc3c7;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+#result-container .box h1 {
+    font-size: 18px;
+}
+
+#result-container .box p {
+    font-size: 15px;
+    margin-top: 6px;
+}

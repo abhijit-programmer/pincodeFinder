@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pincode Finder App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <h1>Pincode Finder</h1>
+    </nav>
+
+    <!-- Search section  -->
+    <section id="search-container">
+        <form action="/getList" method="POST">
+            <input type="text" name="city" id="city">
+            <input type="submit" value="Search" id="submit-btn">
+        </form>
+    </section>
+
+    <!-- Result section  -->
+    <section id="result-container">
+        <% postOffices.forEach(postOffice => { %>
+            <div class="box">
+                <h1><%= postOffice.Name %></h1>
+                <p>District: <%= postOffice.District %></p>
+                <p>State: <%= postOffice.State %></p>
+                <p>Country: <%= postOffice.Country %></p>
+                <p>Pincode: <%= postOffice.Pincode %></p>
+            </div>
+        <% }) %>
+    </section>
+</body>
+</html>
